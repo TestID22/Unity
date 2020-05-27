@@ -5,8 +5,8 @@ using UnityEngine;
 public class handle : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float horizontalSpeed;
-    public float verticalSpeed = 0.7f;
+    public float horizontalSpeed = 0.03f;
+    public float verticalSpeed = 0.07f;
     float speed;
     
 
@@ -15,7 +15,7 @@ public class handle : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.A))
         {
