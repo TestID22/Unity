@@ -13,6 +13,6 @@ public class evil_attack : MonoBehaviour
     
     void Update()
     {
-        transform.Translate(0.007f, 0, 0);
+        transform.Translate(0.1f, 0, 0);
     }
 }

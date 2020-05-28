@@ -17,6 +17,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -46,10 +55,28 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11170}
+    - Class: 114
+      Script: {instanceID: 11458}
+    - Class: 114
+      Script: {instanceID: 11512}
+    - Class: 114
       Script: {instanceID: 12012}
     - Class: 114
+      Script: {instanceID: 12174}
+    - Class: 114
+      Script: {instanceID: 12872}
+    - Class: 114
+      Script: {instanceID: 13628}
+    - Class: 114
       Script: {instanceID: 14016}
+    - Class: 114
+      Script: {instanceID: 14172}
+    - Class: 114
+      Script: {instanceID: 14240}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -58,6 +85,12 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -555,4 +588,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: E:/kurobinaXD.apk
+  playerPath: D:/Code_code_code/kurobina_0.0.17.apk
