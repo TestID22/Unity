@@ -60,17 +60,17 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11460}
+      Script: {instanceID: 11458}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11512}
     - Class: 114
-      Script: {instanceID: 12176}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 12874}
+      Script: {instanceID: 12872}
     - Class: 114
-      Script: {instanceID: 13630}
+      Script: {instanceID: 13628}
     - Class: 114
       Script: {instanceID: 14018}
     - Class: 114
@@ -476,6 +476,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: f0b957470c4ef97be41bb79129c360bd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraFollow2D
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -591,4 +597,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Code_code_code/kurobina_0.0.29.apk
+  playerPath: D:/Code_code_code/kurobina_0.0.48(fix_invis_hero).apk

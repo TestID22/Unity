@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - mainHero
   layers:
   - Default
   - TransparentFX
