@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - Enemy
     - MainMenu
     - handle
     Unity.2D.Animation.Editor.dll:
@@ -15,18 +16,15 @@ ScriptsOnlyBuild:
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.Timeline.Editor.dll:
-    - UnityEditor.Timeline.AnimationPlayableAssetInspector
-    - UnityEditor.Timeline.EditorClip
     - UnityEditor.Timeline.SequenceHierarchy
-    - UnityEditor.Timeline.TimelineAssetViewModel
     - UnityEditor.Timeline.TimelineWindow
-    Unity.Timeline.dll:
-    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -75,6 +73,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11464}
     - Class: 114
       Script: {instanceID: 11518}
+    - Class: 114
+      Script: {instanceID: 12018}
     - Class: 114
       Script: {instanceID: 12180}
     - Class: 114
@@ -347,10 +347,10 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 66568ef5fcd283a24c2ca00fd0064980
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: evil_attack
+    className: Enemy
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -563,7 +563,7 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 62ac959e0f5d20b300896d49009ac24c
+      Hash: 45ff11d5715e2bf38166021964f0ca97
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: handle

@@ -11,6 +11,16 @@ public class handle : MonoBehaviour
     bool isGrounded;
     private Animator animator;
 
+    //Attack
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemy;
+    public int attackDamage = 50;
+
+    //Ограничение ударов в секунду
+    public float attackRate = 2.0f;
+    float nextAttackTime = 0f;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -18,6 +28,16 @@ public class handle : MonoBehaviour
 
     }
 
+    void Update()
+    {
+       
+    }
+    void FixedUpdate()
+    {
+        transform.Translate(speed, 0f, 0f);
+    }
+
+    //Управление
     public void LeftButtonDown()
     {
         speed = -horizontalSpeed;
@@ -35,12 +55,6 @@ public class handle : MonoBehaviour
         theScale.x = 147;
         transform.localScale = theScale;
     }
-
-    public void Stop()
-    {
-        speed = 0;
-        animator.SetBool("isRunning", false);
-    }
     public void OnClickJump()
     {
         if (isGrounded)
@@ -48,10 +62,13 @@ public class handle : MonoBehaviour
             rb.AddForce(new Vector2(0, verticalSpeed), ForceMode2D.Impulse);
         }
     }
-    void FixedUpdate()
+    public void Stop()
     {
-        transform.Translate(speed, 0f, 0f);
+        speed = 0;
+        animator.SetBool("isRunning", false);
     }
+
+    //Проверка ОнГраунд
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -67,6 +84,25 @@ public class handle : MonoBehaviour
             isGrounded = false;
         }
     }
+
+    //Блок Атаки
+    public void Attack()
+    {
+        if(Time.time >= nextAttackTime)
+        {
+            nextAttackTime = Time.time + 1f / attackRate;
+            animator.SetTrigger("Attack");
+            Collider2D[] hitEmeny = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemy);
+            foreach(Collider2D enemy in hitEmeny)
+            {
+                enemy.GetComponent<Enemy>().TakeDamage(attackDamage);
+            }
+
+        }
+
+    }
+
+    
 
     //Управление под ПК
     //private void ComputerHandle()
