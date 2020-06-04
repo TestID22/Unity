@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,6 +9,8 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public int maxHealth = 100;
     int currentHealth;
+
+    private float verticalSpeed;
 
     void Start()
     {
@@ -34,7 +37,9 @@ public class Enemy : MonoBehaviour
         //Animate Die/ anim.SetBool("isDead", true); 
         Debug.Log("Im dying");
         anim.SetBool("isDead", true);
-        this.enabled = false;
-        GetComponent<Collider2D>().enabled = false;
+        Animation.DestroyObject(gameObject);
+        //gameObject.SetActive(false);
     }
+
+   
 }

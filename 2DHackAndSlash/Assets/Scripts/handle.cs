@@ -59,7 +59,7 @@ public class handle : MonoBehaviour
     {
         if (isGrounded)
         {
-            rb.AddForce(new Vector2(0, verticalSpeed), ForceMode2D.Impulse);
+            rb.AddForce(transform.up * verticalSpeed, ForceMode2D.Impulse);
         }
     }
     public void Stop()
