@@ -9,7 +9,9 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public int maxHealth = 100;
     int currentHealth;
+    public float jumpBack = 3.0f;
 
+    public LayerMask player;
     private float verticalSpeed;
 
     void Start()
@@ -26,6 +28,8 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        transform.Translate(jumpBack, 0, 0);
+        anim.SetTrigger("isHurt");
         currentHealth -= damage;
         if(currentHealth < 0)
         {
@@ -37,9 +41,9 @@ public class Enemy : MonoBehaviour
         //Animate Die/ anim.SetBool("isDead", true); 
         Debug.Log("Im dying");
         anim.SetBool("isDead", true);
-        Animation.DestroyObject(gameObject);
-        //gameObject.SetActive(false);
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
     }
 
-   
+
 }

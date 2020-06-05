@@ -66,30 +66,26 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 12020}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 13598}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 14026}
     - Class: 114
-      Script: {instanceID: 14024}
+      Script: {instanceID: 14184}
     - Class: 114
-      Script: {instanceID: 14182}
-    - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 14252}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -131,21 +127,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12182}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 12880}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 13638}
     - Class: 114
-      Script: {instanceID: 14068}
+      Script: {instanceID: 14070}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 14252}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -345,7 +341,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 66568ef5fcd283a24c2ca00fd0064980
+      Hash: 558f3f2b9ce2ea84a480fb9ad9305eea
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -671,4 +667,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/StartMenu.unity
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/Code_code_code/kurobina_0.0.59.apk
+  playerPath: D:/Code_code_code/kurobina_0.0.75.apk

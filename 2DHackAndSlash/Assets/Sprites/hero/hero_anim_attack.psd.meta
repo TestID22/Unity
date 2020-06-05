@@ -8,6 +8,15 @@ TextureImporter:
   - first:
       213: 3923435007753984843
     second: hero_anim_attack_1
+  - first:
+      213: 4434560450354880254
+    second: hero_anim_attack_0
+  - first:
+      213: -691642448585429057
+    second: hero_anim_attack_1
+  - first:
+      213: -6031639420758396081
+    second: hero_anim_attack_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -119,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6dccb691ef1370380800000000000000
-      internalID: -9005173962486068010
+      spriteID: efe166afb39ba8d30800000000000000
+      internalID: 4434560450354880254
       vertices: []
       indices: 
       edges: []
@@ -140,8 +149,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4b12803a57d27630800000000000000
-      internalID: 3923435007753984843
+      spriteID: fbfeb748bdac666f0800000000000000
+      internalID: -691642448585429057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hero_anim_attack_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 7
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f43f37067ef4b4ca0800000000000000
+      internalID: -6031639420758396081
       vertices: []
       indices: 
       edges: []
