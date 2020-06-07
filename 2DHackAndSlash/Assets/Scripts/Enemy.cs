@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         Debug.Log("Im dying");
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        Destroy(gameObject);
     }
 
 
