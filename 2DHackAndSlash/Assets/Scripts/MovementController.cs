@@ -23,10 +23,16 @@ public class MovementController : MonoBehaviour
     public float attackRate = 2.0f;
     float nextAttackTime = 0f;
 
+
+    //Жизни стартовые т.е максимальные, и текущие.
+    public int maxHealth = 100;
+    public int currentHealth;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentHealth = maxHealth;
 
     }
 
@@ -80,14 +86,7 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    //private void OnCollisionExit2D(Collision2D collision)
-    //{
-    //    if (collision.gameObject.tag == "Ground")
-    //    {
-    //        isGrounded = false;
-    //    }
-    //}
-
+    
     //Блок Атаки
     public void Attack()
     {
@@ -105,24 +104,20 @@ public class MovementController : MonoBehaviour
 
     }
 
-    
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if(currentHealth < 0)
+        {
+            Die();
+        }
+        
+        Debug.Log($"I get {maxHealth - currentHealth} damage");
+    }
 
-    //Управление под ПК
-    //private void ComputerHandle()
-    //{
-    //    if (Input.GetKey(KeyCode.A))
-    //    {
-    //        speed = -horizontalSpeed;
-    //    }
-    //    else if (Input.GetKey(KeyCode.D))
-    //    {
-    //        speed = +horizontalSpeed;
-    //    }
-    //    if (Input.GetKeyDown(KeyCode.Space))
-    //    {
-    //        rb.AddForce(new Vector2(0, verticalSpeed), ForceMode2D.Impulse);
-    //    }
-    //    transform.Translate(speed, 0f, 0f);
-    //    speed = 0;
-    //}
+    void Die()
+    {
+        Debug.Log("Im die");
+    }
+  
 }

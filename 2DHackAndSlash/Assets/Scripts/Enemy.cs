@@ -9,21 +9,34 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public int maxHealth = 100;
     int currentHealth;
+    //на сколько отпрыгивает при ударе
     public float jumpBack = 3.0f;
+    [SerializeField]
+    float horizontalSpeed = 3.0f;
 
-    public LayerMask player;
-    private float verticalSpeed;
+    //
+    public LayerMask playerMask;
+
+    //FindPlayer position для того, чтобы идти к нему
+    GameObject playerPos;
+
+    //Atack
+    public float attackRange = 3.0f;
+    public int enemyDamage = 50;
+    public Transform attackPoint;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
+        playerPos = GameObject.FindGameObjectWithTag("Player");
     }
 
     
     void Update()
     {
-
+        transform.position = Vector2.MoveTowards(transform.position, playerPos.transform.position, Time.deltaTime * horizontalSpeed);
+        Attack();
     }
 
     public void TakeDamage(int damage)
@@ -35,6 +48,7 @@ public class Enemy : MonoBehaviour
         {
             Die();
         }
+        Debug.Log($"I take {maxHealth - currentHealth} damage");
     }
     void Die()
     {
@@ -43,6 +57,18 @@ public class Enemy : MonoBehaviour
         anim.SetBool("isDead", true);
         GetComponent<Collider2D>().enabled = false;
         Destroy(gameObject);
+    }
+
+
+    void Attack()
+    {
+        Collider2D[] allColliders = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, playerMask);
+        foreach (Collider2D collider in allColliders)
+        {
+            Debug.Log("Ecть");
+            collider.GetComponent<MovementController>().TakeDamage(enemyDamage);
+        }
+        
     }
 
 
