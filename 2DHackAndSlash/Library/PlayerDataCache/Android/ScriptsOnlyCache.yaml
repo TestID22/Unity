@@ -4,13 +4,19 @@ ScriptsOnlyBuild:
     - CameraController
     - Enemy
     - MainMenu
-    - handle
+    - MirabelleScript
+    - MovementController
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridBrush
+    - UnityEditor.Tilemaps.GridBrushEditor
+    - UnityEditor.Tilemaps.GridPaintPaletteClipboard
+    - UnityEditor.Tilemaps.GridPaintPaletteWindow
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
     - UnityEditor.Tilemaps.GridPalettes
+    - UnityEditor.Tilemaps.PaintableSceneViewGrid
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -36,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -66,26 +73,36 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 590}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 12018}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 11732}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 12022}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 14024}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 13600}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 13640}
+    - Class: 114
+      Script: {instanceID: 14028}
+    - Class: 114
+      Script: {instanceID: 14186}
+    - Class: 114
+      Script: {instanceID: 14254}
+    - Class: 114
+      Script: {instanceID: 14296}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -102,6 +119,14 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 320
+      Script: {instanceID: 0}
+    - Class: 19719996
+      Script: {instanceID: 0}
+    - Class: 156049354
+      Script: {instanceID: 0}
+    - Class: 483693784
+      Script: {instanceID: 0}
+    - Class: 1839735485
       Script: {instanceID: 0}
     Assets/Scenes/StartMenu.unity:
     - Class: 1
@@ -127,21 +152,21 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11176}
+      Script: {instanceID: 11178}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 12180}
+      Script: {instanceID: 12184}
     - Class: 114
-      Script: {instanceID: 12878}
+      Script: {instanceID: 12882}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 14068}
+      Script: {instanceID: 14072}
     - Class: 114
-      Script: {instanceID: 14250}
+      Script: {instanceID: 14254}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -287,6 +312,12 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MirabelleScript
+  - hash:
+      serializedVersion: 2
       Hash: bd3cf68c8964d3c66d1c43f4f98508c9
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -341,7 +372,7 @@ ScriptsOnlyBuild:
     className: Mask
   - hash:
       serializedVersion: 2
-      Hash: 558f3f2b9ce2ea84a480fb9ad9305eea
+      Hash: e5e3075bd1d08a075a3d7e954c8a6687
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Enemy
@@ -557,10 +588,10 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
-      Hash: 45ff11d5715e2bf38166021964f0ca97
+      Hash: 4b85f4df84a61256807dfc51285b2687
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: handle
+    className: MovementController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
