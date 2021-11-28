@@ -8,7 +8,6 @@ public class MovementControler : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 moveVelocity;
-    private bool facingRight = true;
 
     public Joystick joy;
     public ControlType controlType;
@@ -19,42 +18,53 @@ public class MovementControler : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         _animator = GetComponent<Animator>();
+        joy.DeadZone = 0.5f;
     }
 
-    void Update()
+    private void Update()
     {
         if (controlType == ControlType.PC)
         {
             moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-
         }
-        else if(controlType == ControlType.Android)
+        else if (controlType == ControlType.Android)
         {
             moveInput = new Vector2(joy.Horizontal, joy.Vertical);
         }
         moveVelocity = moveInput.normalized * speed;
 
-        if(!facingRight && moveInput.x > 0)
-        {
-            Flip();
-
-        }else if(facingRight && moveInput.x < 0)
-        {
-            Flip();
-        }
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + moveVelocity * Time.deltaTime);
+        if (moveInput.x > 0.0f)
+        {
+            Movement(1);
+            _animator.SetBool("is_running", true);
+            
+        }
+        else if (moveInput.x < 0.0f)
+        {
+            Movement(-1);
+            _animator.SetBool("is_running", true);
+
+        }
+        else
+        {
+            _animator.SetBool("is_running", false);
+
+        }
+
     }
 
-    private void Flip()
+    private void Movement(int directiom)
     {
-        facingRight = !facingRight;
-        Vector3 scaler = transform.localScale;
-        scaler.x *= -1;
-        transform.localScale = scaler;
-
+        Vector3 flip = transform.localScale;
+        flip.x = directiom;
+        transform.localScale = flip;
     }
+
+
+
 }

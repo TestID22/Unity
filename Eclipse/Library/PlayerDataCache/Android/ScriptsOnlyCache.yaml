@@ -1,11 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - CameraController
     - FixedJoystick
     - MovementControler
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
-    - UnityEditor.U2D.Animation.SkinningCachePersistentState
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
     - UnityEditor.U2D.IK.IKGizmos
@@ -90,6 +90,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 3326}
     - Class: 114
       Script: {instanceID: 3338}
+    - Class: 114
+      Script: {instanceID: 26600}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -671,7 +673,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
+  - hash:
+      serializedVersion: 2
+      Hash: e2503eda0d4883aeff8aa7e2e3887dd4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraController
   platform: 13
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: D:/5.Uity Projects/BlackSun(Eclipse)0.0.3.apk
+  playerPath: D:/5.Uity Projects/BlackSun(Eclipse)0.0.7.apk
