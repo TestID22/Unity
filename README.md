@@ -1,6 +1,6 @@
 # Unity
-Working with team.
-Eclipse is isometric prototpye 
+Working with the team.
+Eclipse is an isometric prototype 
 
 
 
